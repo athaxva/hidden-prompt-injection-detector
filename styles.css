@@ -1,0 +1,160 @@
+/**
+ * Styles for the Hidden Prompt Injection Detector popup.
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #f5f5f5;
+  min-width: 400px;
+  max-width: 600px;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.controls {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-rescan {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-rescan:hover {
+  background-color: #45a049;
+}
+
+.status {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.warning {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.findings-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.finding-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.finding-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.finding-text {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  color: #d32f2f;
+  border-left: 3px solid #d32f2f;
+}
+
+.finding-reasons {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.finding-reasons strong {
+  color: #333;
+}
+
+.btn-highlight {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btn-highlight:hover {
+  background-color: #1976D2;
+}
+
+/* Scrollbar styling */
+.findings-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.findings-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.findings-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.findings-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

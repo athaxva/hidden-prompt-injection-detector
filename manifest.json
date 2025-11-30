@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Hidden Prompt Injection Detector",
+  "description": "Detects hidden, instruction-like text in webpages that may be used for AI prompt injection.",
+  "version": "1.0",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Scan this page for hidden prompts",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
